@@ -3,9 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const skinsContainer = document.querySelector('.falling-skins-container');
   
     const skinImages = [
+      'images/frog1.png',
+      'images/frog2.png',
       'images/awp.png',
-      'images/frog.png',
-      'images/frog2.png', // 15x20
+      'images/usp.png', // images fillers
     ];
   
     // Function to create and animate skins
@@ -14,17 +15,23 @@ document.addEventListener('DOMContentLoaded', function() {
       skin.src = skinImages[Math.floor(Math.random() * skinImages.length)];
       skin.classList.add('skin');
   
-      // Randomize starting position (left or right side)
+      // Randomize whether the skin starts on the left or right side of the screen
       const isLeftSide = Math.random() < 0.5;
-      skin.style.left = isLeftSide ? '-60px' : 'calc(100% - 60px)';
-      
-      // Randomize the top starting point
-      skin.style.top = `${Math.random() * 30}px`;
+      const randomOffset = Math.random() * (window.innerHeight / 3); // randomize y-offset slightly
+  
+      if (isLeftSide) {
+        skin.style.left = '-60px'; // Start off-screen to the left
+      } else {
+        skin.style.right = '-60px'; // Start off-screen to the right
+      }
+  
+      // Randomize the top start point for the skin
+      skin.style.top = `${randomOffset}px`;
   
       // Add the skin to the container
       skinsContainer.appendChild(skin);
   
-      // Remove the skin after it falls
+      // Remove the skin after it has fallen
       setTimeout(() => {
         skin.remove();
       }, 5000); // Same as the animation duration

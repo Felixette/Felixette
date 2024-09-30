@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const skinsContainer = document.querySelector('.falling-skins-container');
   
     const skinImages = [
-      'images/frog1.png',
+      'images/frog.png',
       'images/frog2.png',
       'images/awp.png',
       'images/usp.png', // images fillers

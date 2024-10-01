@@ -1,50 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>X</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #212121;
-    }
-    h1 {
-      color: #f0f0f0;
-    }
-    p {
-      font-size: 18px;
-      color: #f9f9f9;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Navbar Example</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Hi!</h1>
-  <p>;></p>
-
-
-    <!-- Steam Profile Button -->
-    <div class="steam-button-container">
-      <a href="https://steamcommunity.com/id/mikasameikite" target="_blank" class="steam-button">
-        Steam Profile
-      </a>
+    <div class="navbar-wrapper">
+        <div class="navbar-back"></div> <!-- Bottom lighter layer -->
+        <div class="navbar">
+            <div class="left-section">
+                <div class="brand">Felixette<span class="star">✦</span></div>
+            </div>
+            <div class="center-section">
+                <button class="email-button">
+                    <img src="email-icon.png" alt="Email">
+                </button>
+            </div>
+            <div class="right-section">
+                <button class="waitlist-button">Waitlist</button>
+            </div>
+        </div>
     </div>
-  
-    <!-- Container for falling skins -->
-    <div class="falling-skins-container"></div>
-  
-    <script src="scripts.js"></script>
 
-  <!-- Embed Twitter posts -->
-  <a class="twitter-timeline" href="https://twitter.com/The_Felixette?ref_src=twsrc%5Etfw">Felixette</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-   <!-- Embed Spotify Track -->
-   <h2>;3</h2>
-   <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4LneFTgEp04h767uptJMPg?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-
+    <div class="content">
+        <p>Page content goes here...</p>
+    </div>
 </body>
 </html>
